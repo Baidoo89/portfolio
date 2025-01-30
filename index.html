@@ -1,6 +1,102 @@
 <!DOCTYPE html>
-<html  >
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        /* Container for page content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Flexbox for layout */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .box {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            flex: 1 1 30%;
+            box-sizing: border-box;
+        }
+
+        /* Image responsiveness */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Media Queries for responsiveness */
+        /* Large screens (above 1200px) */
+        @media (max-width: 1200px) {
+            .box {
+                flex: 1 1 45%;
+            }
+        }
+
+        /* Medium screens (768px - 1200px) */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem; /* Adjust font size for medium screens */
+            }
+
+            .box {
+                flex: 1 1 100%; /* Full width for boxes on medium screens */
+                margin: 10px 0; /* Add margin between stacked boxes */
+            }
+        }
+
+        /* Small screens (480px - 768px) */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem; /* Even smaller font for very small screens */
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .box {
+                padding: 15px; /* Reduce padding on very small screens */
+            }
+        }
+
+        /* Very small screens (below 480px) */
+        @media (max-width: 320px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+
   
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
